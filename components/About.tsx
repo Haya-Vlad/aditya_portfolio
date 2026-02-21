@@ -3,13 +3,13 @@ import Image from "next/image";
 import SectionHeader from "./SectionHeader";
 
 const experience = [
-  { role: "R&D Technician — Selec Controls Pvt. Ltd.", period: "Dec 2023 – July 2024", desc: "Hardware/software validation & debugging. Revamped MVA591 to industrial standards. EMI/EMC compliance testing for IEC61326-1 products." },
-  { role: "Freelance CAD Designer", period: "Sept 2023 – Dec 2023", desc: "Cable tray routing, earthing & lighting layouts for electrical & chemical plants. BOQ generation for multiple projects." },
-  { role: "Engineer Intern — Techtron Pvt. Ltd.", period: "June 2022 – July 2022", desc: "Hands-on across SMD mounting, Quality Assurance, production and logistics at a core electronics company." },
-  { role: "Electrician Trade Apprentice — Siemens Ltd.", period: "Oct 2018 – Sept 2020", desc: "Siemens switchgears & drives expertise. Completed National Vocational Training Certification." },
+  { role: "Electronics Technician — Selec Controls Pvt. Ltd.", period: "Strategic Career Break", desc: "Testing, validation, and firmware debugging of industrial instruments (Voltmeters, Ammeters, MFMs). Focused on EMI/EMC compliance and reliability-focused design." },
+  { role: "Technical Core Head — IETE SPIT", period: "Aug 2023 – Present", desc: "Leading technical initiatives, organizing competitions/workshops, and mentoring juniors for the department's technical committee." },
+  { role: "Electrician Trade Apprentice — Siemens Ltd.", period: "Oct 2018 – Sept 2020", desc: "Developed deep interest in industrial systems and switchgears. Completed National Vocational Training Certification (Siemens Switchgears & Drives)." },
 ];
+
 const stats = [
-  { num: "4+", label: "Years in Industry" }, { num: "4+", label: "Hackathon Awards" },
+  { num: "3x", label: "Hackathon Winner" }, { num: "2+", label: "Industry Experience" },
   { num: "4+", label: "Real Projects" }, { num: "∞", label: "Coffee Consumed" },
 ];
 
@@ -28,9 +28,10 @@ export default function About() {
         </FadeUp>
         <FadeUp delay={0.15}>
           <div className="flex flex-col gap-4 font-mono text-sm leading-relaxed" style={{ color: "#666" }}>
-            <p>Hey, I&apos;m <span style={{ color: "#fb923c" }}>Aditya Gohil</span> — an electronics &amp; embedded systems engineer pursuing <span style={{ color: "#fb923c" }}>B.Tech in Electronics &amp; Telecommunication</span> (Minors in CS) at Sardar Patel Institute of Technology, Mumbai.</p>
-            <p>I specialize in <span style={{ color: "#fb923c" }}>hardware bring-up, firmware development, and IoT product design</span> — from Altium/Eagle PCB layout to bare-metal Embedded C, signal conditioning, and AI/ML on edge hardware. Real industry experience at <span style={{ color: "#fb923c" }}>Selec Controls</span> and <span style={{ color: "#fb923c" }}>Siemens Ltd.</span></p>
-            <p>Deeply passionate about <span style={{ color: "#fb923c" }}>Edge AI, embedded systems, and product development</span> — things that work reliably in the physical world.</p>
+            <p>I am an <span style={{ color: "#fb923c" }}>Electronics Engineering</span> student with a minor in <span style={{ color: "#fb923c" }}>Computer Engineering</span>, focused on building reliable, real-world embedded systems by combining hardware fundamentals with software thinking.</p>
+            <p>My journey spans from a <span style={{ color: "#fb923c" }}>Siemens Apprenticeship</span> to working as an Electronics Technician at <span style={{ color: "#fb923c" }}>Selec Controls</span>, where I specialized in testing, validation, and firmware debugging of industrial instruments. I comfortably work across both hardware and software layers — from <span style={{ color: "#fb923c" }}>Embedded C</span> to system-level electrical validation.</p>
+            <p>Currently, I serve as the <span style={{ color: "#fb923c" }}>Technical Core Head @ IETE SPIT</span>, leading mentoring and technical initiatives while pursuing a career in <span style={{ color: "#fb923c" }}>Embedded Firmware, Automotive Electronics, and UAV systems</span>.</p>
+
             <div className="flex items-center gap-3 mt-3 mb-2 text-[10px] tracking-[0.15em] uppercase" style={{ color: "#f97316" }}>
               <span className="w-4 h-px" style={{ background: "#f97316" }} />Experience
             </div>

@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 const fadeUp = (delay: number) => ({ initial: { opacity: 0, y: 28 }, animate: { opacity: 1, y: 0 }, transition: { duration: 0.7, delay, ease: [0.22, 1, 0.36, 1] } });
-const badges = ["ESP32 & STM32", "FPGA — Artix-7", "Edge AI", "PCB Design", "IoT", "Altium / Eagle"];
+const badges = ["ESP32 (ESP-IDF)", "STM32", "PCB Design (KiCad)", "Industrial Testing", "Embedded C", "Hardware-Software Co-design"];
 export default function Hero() {
   return (
     <section id="hero" className="relative min-h-screen flex flex-col justify-center pt-28 overflow-hidden">
