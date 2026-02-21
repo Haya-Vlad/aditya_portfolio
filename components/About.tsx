@@ -11,7 +11,7 @@ const experience = [
 
 const stats = [
   { num: "3x", label: "Hackathon Winner" }, { num: "2+", label: "Industry Experience" },
-  { num: "4+", label: "Real Projects" }, { num: "∞", label: "Coffee Consumed" },
+  { num: "5+", label: "Real Projects" }, { num: "∞", label: "Coffee Consumed" },
 ];
 
 export default function About() {
