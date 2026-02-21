@@ -7,13 +7,13 @@ import Image from "next/image";
 const projects = [
   {
     num: "01",
-    name: "Low-Cost Industrial IoT Development Board",
-    badge: "🥇 1st Place",
-    desc: "Custom development board using AVR microcontroller supporting multiple comm. protocols and extended IO expansion.",
-    fullDesc: "This project involved the complete design and hardware bring-up of an industrial-grade IoT development board. Key features include support for SPI, I2C, and UART protocols, along with dedicated expansion headers for industrial sensors. I handled everything from schematic design in Eagle CAD to manual SMD assembly and rigorous validation testing for EMI/EMC compliance.",
-    tags: ["AVR uC", "SMD Assembly", "SPI", "I2C", "UART", "Eagle CAD"],
-    href: "#",
-    gallery: ["/project1-1.jpg", "/project1-2.jpg"] // Placeholders
+    name: "Industrial IoT Node",
+    badge: "🥈 Mini Project",
+    desc: "Modular AVR-based industrial IoT platform for reliable data acquisition, sensor interfacing, and edge-level embedded control.",
+    fullDesc: "The Industrial IoT Node is a low-cost, modular industrial embedded platform built around the ATmega2560. It features 0–10V / 4–20mA analog inputs via the 16-bit ADS1115 ADC, opto-isolated digital I/O, and integrated wired/wireless communication including RS-485 (Modbus), RS-232, Wi-Fi (ATWINC1500), and BLE. Designed with surge, reverse-polarity, and analog-digital ground isolation, it serves as a robust mini-controller for industrial automation, agriculture, and research.",
+    tags: ["ATmega2560", "RS-485 (Modbus)", "BLE", "Wi-Fi", "Analog Front-End", "Opto-isolation"],
+    href: "https://github.com/Haya-Vlad/Industrial-IoT-Node",
+    gallery: ["/iot-node-hw.jpg", "/iot-node-poster.png"]
   },
   {
     num: "02",
@@ -50,7 +50,6 @@ const projects = [
 export default function Projects() {
   const [selectedProject, setSelectedProject] = useState<null | typeof projects[0]>(null);
 
-  // Close modal on Escape key
   useEffect(() => {
     const handleEsc = (e: KeyboardEvent) => {
       if (e.key === "Escape") setSelectedProject(null);
@@ -74,9 +73,7 @@ export default function Projects() {
             className="group relative flex flex-col md:grid md:items-center gap-4 p-7 md:p-8 transition-colors duration-200"
             style={{ background: "#111111", borderBottom: i < projects.length - 1 ? "1px solid rgba(249,115,22,0.2)" : "none", gridTemplateColumns: "auto 1fr auto", cursor: "pointer" }}
             onClick={() => setSelectedProject(p)}
-            onMouseEnter={e => (e.currentTarget as HTMLElement).style.background = "#181818"}
-            onMouseLeave={e => (e.currentTarget as HTMLElement).style.background = "#111111"}>
-
+          >
             <motion.div className="absolute left-0 top-0 bottom-0 w-0.5 origin-bottom" initial={{ scaleY: 0 }} whileHover={{ scaleY: 1 }} transition={{ duration: 0.25 }} style={{ background: "#f97316" }} />
             <span className="font-mono text-xs tracking-wider min-w-[2rem] hidden md:block" style={{ color: "rgba(249,115,22,0.5)" }}>{p.num}</span>
             <div>
@@ -99,7 +96,6 @@ export default function Projects() {
         ))}
       </div>
 
-      {/* Modal Backdrop & Dialog */}
       <AnimatePresence>
         {selectedProject && (
           <>
@@ -122,7 +118,6 @@ export default function Projects() {
                 className="pointer-events-auto w-full max-w-4xl max-h-[90vh] overflow-y-auto clip-corner-lg bg-[#0a0a0a] relative"
                 style={{ border: "1px solid rgba(249,115,22,0.3)", boxShadow: "0 0 50px rgba(249,115,22,0.1)" }}
               >
-                {/* Close Button */}
                 <button
                   onClick={() => setSelectedProject(null)}
                   className="absolute top-6 right-6 z-10 w-10 h-10 flex items-center justify-center font-mono text-xl transition-all hover:rotate-90"
@@ -164,18 +159,20 @@ export default function Projects() {
                     </div>
 
                     <div className="md:col-span-2 flex flex-col gap-4">
-                      {/* Image Placeholders */}
                       {selectedProject.gallery.map((img, idx) => (
                         <div
                           key={idx}
-                          className="clip-corner w-full aspect-video circuit-grid bg-[#111] flex items-center justify-center relative overflow-hidden group"
+                          className="clip-corner w-full aspect-video circuit-grid bg-[#111] relative overflow-hidden group"
                           style={{ border: "1px solid rgba(249,115,22,0.15)" }}
                         >
-                          {/* In a real scenario, use <Image src={img} ... /> */}
-                          <div className="text-[10px] font-mono uppercase tracking-widest opacity-20" style={{ color: "#f97316" }}>
-                            [ Project Visual {idx + 1} ]
-                          </div>
-                          <div className="absolute inset-0 bg-accent/5 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
+                          <Image
+                            src={img}
+                            alt={`${selectedProject.name} Visual ${idx + 1}`}
+                            fill
+                            style={{ objectFit: "cover" }}
+                            className="opacity-100 transition-opacity"
+                            priority
+                          />
                         </div>
                       ))}
                       <div className="p-5 clip-corner bg-[#111] border border-white/5">
