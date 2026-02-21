@@ -10,7 +10,7 @@ const experience = [
 ];
 
 const stats = [
-  { num: "4+", label: "Years in Industry" }, { num: "4+", label: "Hackathon Awards" },
+  { num: "3x", label: "Hackathon Winner" }, { num: "2+", label: "Industry Experience" },
   { num: "4+", label: "Real Projects" }, { num: "∞", label: "Coffee Consumed" },
 ];
 
