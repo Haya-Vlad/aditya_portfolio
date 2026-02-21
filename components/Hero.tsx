@@ -32,7 +32,7 @@ export default function Hero() {
           <span className="block" style={{ color: "transparent", WebkitTextStroke: "1.5px #f97316" }}>Gohil.</span>
         </motion.h1>
         <motion.p {...fadeUp(0.6)} className="font-mono max-w-xl mb-5 leading-relaxed" style={{ fontSize: "clamp(0.85rem,1.5vw,1rem)", color: "#666" }}>
-          Building <span style={{ color: "#fb923c" }}>firmware, hardware &amp; IoT systems</span> that bridge silicon and software. From <span style={{ color: "#fb923c" }}>custom PCB design</span> to bare-metal Embedded C — engineering products that work reliably in the real world.
+          Focused on building <span style={{ color: "#fb923c" }}>reliable, real-world embedded systems</span> by combining hardware fundamentals with software thinking. From <span style={{ color: "#fb923c" }}>PCB design</span> to bare-metal <span style={{ color: "#fb923c" }}>Embedded C</span> — engineering products that bridge silicon and software.
         </motion.p>
         <motion.div {...fadeUp(0.75)} className="flex flex-wrap gap-2 mb-10">
           {badges.map(b => (
