@@ -20,7 +20,7 @@ export default function About() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 items-start">
         <FadeUp>
           <div className="relative mx-auto md:mx-0 max-w-[280px]">
-            <div className="clip-corner-lg w-full circuit-grid overflow-hidden relative" style={{ aspectRatio: "3/4", background: "#181818", border: "1px solid rgba(249,115,22,0.2)" }}>
+            <div className="clip-corner-lg w-full circuit-grid overflow-hidden relative" style={{ aspectRatio: "2/3", background: "#181818", border: "1px solid rgba(249,115,22,0.2)" }}>
               <Image src="/pfp.jpg" alt="Aditya Gohil" fill style={{ objectFit: "cover", objectPosition: "center top" }} className="rounded-sm" />
             </div>
             <div className="absolute -bottom-3 -right-3 w-4/5 h-4/5 pointer-events-none" style={{ border: "1px solid rgba(249,115,22,0.3)", clipPath: "polygon(0 0,calc(100% - 16px) 0,100% 16px,100% 100%,16px 100%,0 calc(100% - 16px))" }} />
